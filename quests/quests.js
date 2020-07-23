@@ -4,7 +4,9 @@ import { findById, renderSection } from './questUtils.js';
 
 const main = document.querySelector('main');
 
-const questId = 'monsters';
+const params = new URLSearchParams(window.location.search);
+
+const questId = params.get('id');
 
 const questData = findById(quests, questId);
 
