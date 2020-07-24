@@ -22,8 +22,11 @@ body {
     
 }
 .maps {
-    
+
     background-image: url('../assets/oregonmap.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 
 }
 
@@ -100,4 +103,11 @@ footer {
     justify-content: flex-end;
     background-color: var(--color3);
     box-shadow: var(--shadow);
+}
+.results-section {
+    font-family: fantasy;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
