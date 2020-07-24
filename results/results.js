@@ -1,13 +1,11 @@
-import { getUser } from '../userUtils.js'
+import { getUser } from '../userUtils.js';
 
+ 
 const userResults = getUser();
 console.log(userResults);
 
-const section = document.createElement('section');
+const results = document.getElementById('results');
 
-   
-  
-section.textContent = 'You ended up with : ' + userResults.hp; + ' life left and ' + userResults.gold + ' gold.';
-console.log(userResults.hp);
-console.log(userResults.gold);
-console.log(section);
+
+results.textContent = 'Hey ' + userResults.name + '!  You ended up with ' + userResults.gold + ' dollars and ' + userResults.hp + ' life left!'
+

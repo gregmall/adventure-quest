@@ -1,5 +1,5 @@
-const monsters = {
-    id: 'monsters',
+const klammath = {
+    id: 'klammath',
     title: 'Interesing Diner in Klammath Falls',
     map: {
         top: '89%',
@@ -36,16 +36,15 @@ const monsters = {
     }]
 };
 
-const dragon = {
-    id: 'dragon',
+const beach = {
+    id: 'beach',
     title: 'A Beach Bar Detour',
     map: {
         top: '57%',
         left: '67%'
     },
     image: '../assets/beach.jpg',
-    audio: 'dragon.wav',
-    action: 'dragon-growl.aiff',
+
     description: `
     You've been riding your bike for 10 straight days going up the coast.  It is beautiful but the isolation and fatigue is getting to you.  You come to a small beach town.  Its picturesque image is lovely to behold.  Ahead, you see a sign that says “Tavern”.  You are tired and thirsty and would love to see some people. You stroll in and sit at the bar.  A stranger sits next to you and offers to buy you a drink.  What do you do?
     `,
@@ -76,16 +75,15 @@ const dragon = {
     }]
 };
 
-const treasure = {
-    id: 'treasure',
+const mountain = {
+    id: 'mountain',
     title: 'A Mountain of Choice',
     map: {
         top: '31%',
         left: '5%'
     },
     image: '../assets/mountain.jpg',
-    audio: 'treasure-chests.wav',
-    action: 'chest-opening.wav',
+ 
     description: `
         You've always wanted to climb a mountain.  You finally get your chance!  Your tour around the state of Oregon has brought you face to face with a majestic peak.  You enter mountain climbing guided tour office and are presented with several options.  Which do you choose?
     `,
@@ -111,9 +109,9 @@ const treasure = {
 };
 
 const quests = [
-    monsters, 
-    treasure,
-    dragon
+    klammath, 
+    beach,
+    mountain
 ];
 
 
