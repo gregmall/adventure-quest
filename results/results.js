@@ -9,3 +9,12 @@ const results = document.getElementById('results');
 
 results.textContent = 'Hey ' + userResults.name + '!  You ended up with ' + userResults.gold + ' dollars and ' + userResults.hp + ' life left!';
 
+const myButton = document.getElementById('reset');
+
+myButton.addEventListener('click', () => {
+    
+    window.location = '../index.html';
+
+});
+    
+
