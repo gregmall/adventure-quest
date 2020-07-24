@@ -55,7 +55,7 @@ test('time to test a function', (expect) => {
     <div>
         A Den of Monsters
     </div>
-   <image></image>
+   <imgsrc=\"http://www.placekitten.com/300/300/\">
     <form>
         <div>You enter the quest chamber only to be confronted by a hoard of monsters. And they look hungry. What do you do?</div>
         <label>
