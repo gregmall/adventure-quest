@@ -1,9 +1,13 @@
+ 
+import { getUser, setUser } from '../userUtils.js';
+
 export function renderSection(quest) {
     const section = document.createElement('section');
     const div = document.createElement('div');
+    console.log(quest);
     div.textContent = quest.title;
 
-    const img = document.createElement('image');
+    const img = document.createElement('img');
     img.src = quest.image;
 
     const form = document.createElement('form');
@@ -11,7 +15,7 @@ export function renderSection(quest) {
     description.textContent = quest.description;
     form.append(description);
 
-    for (let i = 0; i < quest.choices.length; i++){
+    for (let i = 0; i < quest.choices.length; i++) {
         const label = document.createElement('label');
         const labelDiv = document.createElement('div');
         const choice = quest.choices[i];
@@ -31,6 +35,29 @@ export function renderSection(quest) {
     const button = document.createElement('button');
 
     button.textContent = 'Submit';
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+    
+        const formData = new FormData(form);
+
+        const choiceId = formData.get('choices');
+        const results = findById(quest.choices, choiceId);
+
+        const user = getUser();
+
+        user.gold += results.gold;
+        user.hp += results.hp;
+        user.completed[quest.id] = true;
+
+        setUser(user);
+
+        const resultDiv = document.querySelector('#result');
+        resultDiv.textContent = results.result;
+
+        const nextButton = document.querySelector('#next');
+
+        nextButton.classList.remove('hidden');
+    });
 
     form.append(button);
     section.append(div, img, form);
@@ -48,4 +75,4 @@ export function findById(quests, id) {
     }
     return item;
 
-}
+}       
