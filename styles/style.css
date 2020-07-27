@@ -121,6 +121,7 @@ footer {
     justify-content: center;
 }
 button {
+    
     font-size: 20px;
     background-color: maroon;
     color: whitesmoke
@@ -129,4 +130,13 @@ button {
 .main-section{
     font-family: fantasy;
     font-size: 25px;
+}
+
+#result {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+
 }

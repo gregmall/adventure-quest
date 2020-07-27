@@ -6,8 +6,14 @@ console.log(userResults);
 
 const results = document.getElementById('results');
 
+if (userResults.hp <= 0) { 
+   
+    
+    results.textContent = 'Sorry ' + userResults.class + ' ' + userResults.name + '.  You died.  You should really be more careful.  RIP.';
 
-results.textContent = 'Hey ' + userResults.name + '!  You ended up with ' + userResults.gold + ' dollars and ' + userResults.hp + ' life left!';
+} else {
+    results.textContent = 'Hey ' + userResults.name + '!  You ended up with ' + userResults.gold + ' dollars and ' + userResults.hp + ' life left!';
+}
 
 const myButton = document.getElementById('reset');
 
